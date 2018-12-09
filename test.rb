@@ -11,4 +11,10 @@ class TestFizzbuzz < Test::Unit::TestCase
         assert_equal "FizzBuzz", method_fizz([30])
         assert_equal "FizzBuzz", method_fizz([15, 30])
     end
+
+    def test_if_fizzbuzz_take_place_of_multiples_of_5_only_but_not_15_multiples
+        assert_equal "Fizz", method_fizz([5])
+        assert_equal "Fizz", method_fizz([10])
+        assert_not_equal "Fizz", method_fizz([15, 30])
+    end
 end
